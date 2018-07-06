@@ -1,0 +1,1 @@
+16 * * * * source /opt/python/current/env && python3 /opt/python/current/app/manage.py editions_updater

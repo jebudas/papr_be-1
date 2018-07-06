@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="{{OG_TITLE}}" />
+	<meta property="og:description" content="{{OG_TITLE}}" />
+	<meta property="og:image" content="{{OG_IMAGE|safe}}" />
+	<!-- obj.text|safe -->
+	<title>PAPR - News App</title>
+
+  <!-- FAVICON -->
+	<link rel="shortcut icon" href="https://s3.amazonaws.com/papr.co/static/images/favicon.png">
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+	<!-- CSS -->
+	<link href="/Development/clients/PAPR/django/papr_be/papr_be/www/static/css/papr_article.css" rel="stylesheet">
+  <!--
+  <link href="https://s3.amazonaws.com/papr.co/static/css/papr_article.css" rel="stylesheet">
+  <link href="/Development/clients/PAPR/django/papr_be/papr_be/www/static/css/papr_article.css" rel="stylesheet">
+  -->
+
+</head>
+
+<body onload="checkForApple()">
+
+<div class="container-full">
+
+  <img class="img-fluid" src="https://s3.amazonaws.com/papr.co/static/images/article_iphone.png" alt="iPhone">
+
+  <div class="button-box-blue">
+    <a href="{{ request.GET.article_url }}" class="button_download">Download app to read article</a>
+  </div>
+
+</div>
+
+<!-- Plugin JavaScript -->
+<script type="text/javascript">
+
+	function checkForApple() {
+
+		var iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+
+		if (iOS) {
+			alert("iOS? Yes, Baby")
+		} else if (navigator.appVersion.indexOf("Mac")!=-1) {
+			alert("Mac? Yes, Baby")
+		} else {
+			alert("iOS? Baby, I'm so sorry but no.")
+		}
+
+	}
+
+</script>
+
+</body>
+</html>

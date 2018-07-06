@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>PAPR . Follow What Matters To You</title>
+
+	<!-- Fake Favicon -->
+	<link rel="shortcut icon" href="#" />
+
+	<!-- Custom fonts for this template -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+  {% load static from staticfiles %}
+  <link href="{% static 'css/papr_invite.css' %}" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+<div class="container-full">
+
+	    <!-- HEADER -->
+		<div class="header">
+			<div class="header-top">
+				<a class="a-logo" href="#page-top">PAPR</a>
+			</div>
+			<div class="header-bottom">
+				<!-- <form name="form_invite" id="id_form_invite" novalidate="novalidate" action="http://papr-be-dev-20170811.us-east-1.elasticbeanstalk.com/api/atsbtsip1p1/www/invite_request/" method="post"> -->
+				<form name="form_invite" id="id_form_invite" novalidate="novalidate" action="javascript:supDude()" method="post">
+          {% csrf_token %}
+          <input type="email" class="form-email" id="id_form_invite_email" name="name_form_invite_email" placeholder="enter email" required="required" data-validation-required-message="Please enter your email address.">
+          <input type="submit" class="form-button" id="id_form_invite_button" value="Request Invite">
+					<div class="form-optin1">
+						<input id="id_form_invite_optin1" type="checkbox">
+						<input id="id_form_invite_optin2" type="radio" name="name_form_invite_optin2" value="YES">
+						<input id="id_form_invite_optin2" type="radio" name="name_form_invite_optin2" value="NO">
+					</div>
+				</form>
+			</div>
+		</div>
+
+	    <!-- FOLLOW -->
+	    <section class="section-follow">
+	    	<div class="follow-small">
+				<h1>Follow what <br />matters to you.</h1>
+        <img class="img-fluid follow-img" src="{% static 'images/iphone.png' %}" alt="iPhone">
+			</div>
+	    	<div class="follow-large">
+				<div class="follow-row">
+					<div class="follow-column-left">
+						<h2 class="follow-column-left-text">Follow what <br />matters to <br />you.</h2>
+					</div>
+					<div class="follow-column-right">
+						<img class="img-fluid follow-img-large" src="{% static 'images/iphone.png' %}" alt="iPhone">
+		    		</div>
+				</div>
+			</div>
+		</section>
+
+	    <!-- SPACER -->
+	    <div class="section-spacer">&nbsp;</div>
+
+		<!-- GET THE HOMEPAGE -->
+		<section class="section-homepage">
+			<img class="img-fluid img-homepage" src="{% static 'images/homepage_icons.png' %}" alt="">
+			<div class="container-text">
+				<h3>Get the<br />homepage.</h3>
+				<h4>Get the homepage.</h4>
+				<h5>PAPR collects all the homepages you want to read — so you no longer need to move from app to app to stay informed. Its simple, fast and beautiful.</h5>
+				<h6>PAPR2 collects all the homepages you want to read — so you no longer need to move from app to app to stay informed. Its simple, fast and beautiful.</h6>
+			</div>
+		</section>
+
+	    <!-- SPACER -->
+	    <div class="section-spacer">&nbsp;</div>
+
+		<!-- THE MOST ACCURATE -->
+		<section class="section-accurate">
+			<div class="container-text">
+				<h3>THE MOST<br />ACCURATE.</h3>
+				<h4>THE MOST ACCURATE<br />AND IT'S FREE.</h4>
+				<h5>If its on the newyorktimes.com then its on PAPR. We show you exactly what’s on the news sources homepage. Every sources papr is trustworthy and reliable.</h5>
+				<h6>If its on the newyorktimes.com then its on PAPR. We show you exactly what’s on the news sources homepage. Every sources papr is trustworthy and reliable.</h6>
+			</div>
+		</section>
+
+	    <!-- SPACER -->
+	    <div class="section-spacer">&nbsp;</div>
+
+		<!-- INVITE -->
+		<section class="section-invite">
+			<div class="container-text">
+				<img class="img-fluid" src="{% static 'images/icon_mail.png' %}" alt="">
+				<h3 class="text-white">Invite only.</h3>
+				<h4 class="text-white">Invite only.</h4>
+				<h5 class="text-white">PAPR is currently invite-only. Request an invitation above, or get an invite through a friend who already has PAPR.</h5>
+				<h6 class="text-white">PAPR is currently invite-only. Request an invitation above, or get an invite through a friend who already has PAPR.</h6>
+			</div>
+		  </div>
+		</section>
+
+		<!-- MANIFESTO -->
+		<section class="section-manifesto">
+			<div class="container-text">
+				<h3>Our Manifesto</h3>
+				<h4 class="text-manifesto-large">Our Manifesto</h4>
+
+				<h5>PAPR relies on newspaper editors to curate the news, while social networks and most news apps use algorithms.</h5>
+				<h5>The news stories we read shape our opinions and who we are as a society.</h5>
+				<h5><span>Algorithms have no place in deciding what the news is.</span></h5>
+				<h5>Sincerely, Team Papr,<br />Cornell Tech Campus, 2018</h5>
+
+				<h6 class="text-manifesto-large">PAPR relies on newspaper editors to curate the news, while social networks and most news apps use algorithms.</h6>
+				<h6 class="text-manifesto-large">The news stories we read shape our opinions and who we are as a society.</h6>
+				<h6 class="text-manifesto-large"><span>Algorithms have no place in deciding what the news is.</span></h6>
+				<h6 class="text-manifesto-large">Sincerely, Team Papr,<br />Cornell Tech Campus, 2018</h6>
+
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<section class="section-footer">
+			<div class="container-text">
+				<small>Founded with love at Cornell Tech NYC.</small>
+				<br />&nbsp;<br />
+				<small>For other inquiries email us at sup@papr.co</small>
+				<br />&nbsp;<br />
+				<small>PAPR MEDIA INC. Bryant Park, NYC</small>
+		</div>
+		</section>
+
+</div>
+
+    <!-- Plugin JavaScript -->
+    <script type="text/javascript">
+
+        function supDude(){
+            // alert("sup, dude? \n You are: " + document.forms[0].elements[0].value);
+            document.getElementById("id_form_invite_email").value = "Success!";
+            document.getElementById("id_form_invite_button").value = "Invite Sent!";
+        }
+
+
+    </script>
+
+</body>
+</html>
+
+
+<!-- TYG
+<form action="/invite/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit?" />
+</form>
+-->
