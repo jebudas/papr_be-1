@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="{{OG_TITLE}}" />
+	<meta property="og:description" content="{{OG_TITLE}}" />
+	<meta property="og:image" content="{{OG_IMAGE|safe}}" />
+	<!-- obj.text|safe -->
+	<title>PAPR - News App</title>
+
+  <!-- FAVICON -->
+	<link rel="shortcut icon" href="https://s3.amazonaws.com/papr.co/static/images/favicon.png">
+
+	<!-- FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+	<!-- CSS -->
+	<link href="https://s3.amazonaws.com/papr.co/static/css/papr_article.css" rel="stylesheet">
+  <!--
+  <link href="https://s3.amazonaws.com/papr.co/static/css/papr_article.css" rel="stylesheet">
+  <link href="/Development/clients/PAPR/django/papr_be/papr_be/www/static/css/papr_article.css" rel="stylesheet">
+  -->
+
+</head>
+
+<body onload="checkForApple()">
+
+	<div class="container-full">
+
+		<div class="container-elements">
+		<a href="{{ request.GET.article_url }}" id="link_download" class="button_download">Download&nbsp; &nbsp;<br />to read article &gt;</a>
+		</div>
+
+		<img class="img-fluid" src="https://s3.amazonaws.com/papr.co/static/images/sharing/iphone_app_store.jpg" alt="iPhone">
+
+	</div>
+
+<!-- Plugin JavaScript -->
+<script type="text/javascript">
+
+	function checkForApple() {
+
+		var iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+
+		if (iOS) {
+			// alert("iOS? Yes, Baby")
+			document.getElementById('link_download').href = "https://itunes.apple.com/us/app/medium/id828256236?mt=8";
+			document.getElementById('link_download').innerHTML = "Download&nbsp; &nbsp;<br />to read article &gt;";
+		} else if (navigator.appVersion.indexOf("Mac")!=-1) {
+			// alert("Mac? Yes, Baby")
+			document.getElementById('link_download').href = "{{OG_URL|safe}}";
+			document.getElementById('link_download').innerHTML = "Go to article &gt;";
+		} else {
+			// alert("iOS? Baby, I'm so sorry but no.")
+			document.getElementById('link_download').href = "{{OG_URL|safe}}";
+			document.getElementById('link_download').innerHTML = "Android? <br />Go to article &gt;";
+		}
+
+	}
+
+  function aloha() {
+
+    {% if request.GET.article_url %}
+      alert_text = "" + "{{ request.GET.article_url }}"
+    {% endif %}
+
+    alert(alert_text);
+
+  }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+html {
+	height: 100%;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;}
+body {
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+  margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	overflow:hidden;}
+a {
+	float:right;
+	text-align: right;
+	color: #007aff;
+	font-size: 1.1rem;
+	text-decoration: none;
+	font-weight: 400;}
+
+.container-full {
+  text-align: center;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-color:#ffffff;}
+
+.container-elements {
+	float: right;
+  background:#ffffff;
+  /* top:30px; */
+  /* left: -10px; */
+  width : 91%;
+  height : 30px;
+  position: absolute; /* not relative anymore */
+  /* z-index:5; It's already stacked above if positioned. Needed if other positioned elements are there (a value of 1 would be enough) */
+  transform: translate(0px, 20px); /* replaces relative positioning (left and top => X and Y) */
+}
+.img-fluid {
+	max-height: 101%;
+	max-width: 101%;}
+
+@media (min-width:992px) {
+
+	.container-elements {
+	  width : 80%;
+	}
+
+}
+
+@media (min-width:1310px) {
+
+	.container-elements {
+	  width : 68%;
+	}
+
+}
+
+@media (min-width:1540px) {
+
+	.container-elements {
+	  width : 64%;
+	}
+
+}

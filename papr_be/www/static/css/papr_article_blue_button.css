@@ -1,0 +1,85 @@
+body {
+	font-family: 'Roboto', sans-serif;
+  margin: 30px 0px 0px 0px;
+	padding: 0px;
+	overflow-x:hidden;}
+a {
+	font-size: 1.5rem;
+	text-decoration: none;
+	font-weight: 700;}
+.a-logo {
+	color: #ffffff;
+	letter-spacing:.01rem;
+	margin: 0px;
+	padding: 0px;}
+.button_download {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+	font-size:1.0rem;
+	font-weight:400;
+  height: 100%;
+  width: 100%;
+  background: #007aff;
+  border-radius: 7px;}
+.button-box-blue {
+  width: 61%;
+  color: #ffffff;
+  text-align: center;
+  height: 35px;
+  max-height: 35px;
+  margin: 20px auto;
+  padding: 0px 0px 0px 0px;}
+.button-box-blue a {
+  color: #ffffff;
+  line-height: 35px;
+  font-size:0.8rem;
+  font-weight:400;}
+.container-full {
+	width: 100%;
+  text-align: center;
+	margin: 0px;
+	padding: 0px;
+	background-color:#ffffff;}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (min-width:992px) {
+
+  .button-box-blue {
+    width: 30%;
+    height: 55px;
+    max-height: 55px;}
+  .button-box-blue a {
+    font-size:1.1rem;
+    font-weight:400;
+    line-height: 55px;}
+  .img-fluid {
+    max-width: 70%;
+    height: auto;}
+
+}
+
+@media (min-width:1310px) {
+
+  .button-box-blue {
+    width: 20%;}
+  .button-box-blue a {
+    font-size:1.1rem;
+    font-weight:400;}
+  .img-fluid {
+    max-width: 60%;
+    height: auto;}
+
+}
+
+@media (min-width:1540px) {
+
+  .img-fluid {
+    max-width: 50%;
+    height: auto;}
+
+
+}
