@@ -42,9 +42,6 @@ urlpatterns = [
     url(r'^api/atsbtsip1p1/user/update_user_subscriptions/', views_api_user.ApiUserSubscribe.as_view()),
     url(r'^api/atsbtsip1p1/user/update/', views_api_user.ApiUpdateUser.as_view()),
     url(r'^api/atsbtsip1p1/share/', views_api_www.ApiShare.as_view()),
-    # DEPRECATED . KILL -9 AFTER MAY 2018
-    # url(r'^invite/', views_api_user.ApiFormInviteRequest.as_view()),
-    # url(r'^api/atsbtsip1p1/www/invite_request/', views_api_user.ApiFormInviteRequest.as_view()),
 
     #v1.0
     url(r'^admin/', admin.site.urls),
