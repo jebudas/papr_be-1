@@ -20,7 +20,7 @@ idna==2.6
 jieba3k==0.35.1
 jmespath==0.9.3
 jsonfield
-lxml==4.0.0
+lxml==4.9.1
 nltk==3.2.4
 olefile==0.44
 pathspec==0.5.0
